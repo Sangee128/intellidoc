@@ -2,7 +2,7 @@ import React from "react";
 
 import { useEffect, useRef } from 'react'
 import './ProcessPanel.css'
-
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000"
 const STAGES = [
   'Loading image',
   'Layout detection',
@@ -20,14 +20,14 @@ export default function ProcessPanel({ jobId, job, onJobUpdate, onDone }) {
   useEffect(() => {
     const poll = async () => {
       try {
-        const res  = await fetch(`/api/jobs/${jobId}`)
+        const res  = await fetch(`${API_URL}/api/jobs/${jobId}`)
         const data = await res.json()
         onJobUpdate(data)
 
         if (data.status === 'done') {
           clearInterval(pollRef.current)
           // Fetch full result JSON
-          const rRes  = await fetch(`/api/json/${jobId}`)
+          const rRes  = await fetch(`${API_URL}/api/json/${jobId}`)
           const rData = await rRes.json()
           onDone(data, rData)
         } else if (data.status === 'error') {
