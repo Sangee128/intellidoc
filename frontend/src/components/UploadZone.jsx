@@ -4,7 +4,7 @@ import './UploadZone.css'
 const ACCEPTED = '.pdf,.png,.jpg,.jpeg,.tiff,.bmp,.webp'
 const ACCEPTED_TYPES = new Set(['application/pdf','image/png','image/jpeg',
   'image/tiff','image/bmp','image/webp'])
-
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000"
 export default function UploadZone({ onUploaded }) {
   const [dragging, setDragging]   = useState(false)
   const [uploading, setUploading] = useState(false)
@@ -21,7 +21,7 @@ export default function UploadZone({ onUploaded }) {
     try {
       const fd = new FormData()
       fd.append('file', file)
-      const res = await fetch('/api/process', { method: 'POST', body: fd })
+      const res = await fetch(`${API_URL}/api/process`, { method: 'POST', body: fd })
       const text = await res.text()
       if (!text) throw new Error('Empty response from server')
       const data = JSON.parse(text)
