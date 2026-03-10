@@ -1,4 +1,5 @@
 import { useState } from 'react'
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000"
 import './ResultPanel.css'
 
 export default function ResultPanel({ jobId, result, filename, onReset }) {
@@ -27,13 +28,13 @@ export default function ResultPanel({ jobId, result, filename, onReset }) {
           )}
         </div>
         <div className="result-topbar__actions">
-          <a href={`/api/download/${jobId}`} className="btn btn--primary" download>
+          <a href={`${API_URL}/api/download/${jobId}`} className="btn btn--primary" download>
             ⬇ DOCX
           </a>
-          <a href={`/api/download/${jobId}/html`} className="btn btn--secondary" download>
+          <a href={`${API_URL}/api/download/${jobId}/html`} className="btn btn--secondary" download>
             ⬇ HTML
           </a>
-          <a href={`/api/download/${jobId}/md`} className="btn btn--secondary" download>
+          <a href={`${API_URL}/api/download/${jobId}/md`} className="btn btn--secondary" download>
             ⬇ Markdown
           </a>
           <button className="btn btn--ghost" onClick={onReset}>
@@ -88,7 +89,7 @@ export default function ResultPanel({ jobId, result, filename, onReset }) {
           <div className="result-overlay__frame">
             {!overlayLoaded && <div className="result-overlay__loading"><span className="spinner" /></div>}
             <img
-              src={`/api/overlay/${jobId}`}
+              src={`${API_URL}/api/overlay/${jobId}`}
               alt="Layout overlay"
               onLoad={() => setOverlayLoaded(true)}
               style={{ opacity: overlayLoaded ? 1 : 0 }}
