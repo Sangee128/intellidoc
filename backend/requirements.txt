@@ -1,0 +1,27 @@
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9
+
+# OCR pipeline
+paddlepaddle==2.6.2
+paddleocr==2.7.3
+# paddlepaddle-gpu==2.6.1  # ← uncomment + remove paddlepaddle above for GPU
+
+# Table detection
+transformers==4.40.0
+timm==0.9.16
+torch==2.2.2
+torchvision==0.17.2
+
+# PDF rendering
+pdf2image==1.17.0
+Pillow==10.3.0
+pymupdf==1.24.0
+
+# Output
+python-docx==1.1.0
+
+# Utilities
+numpy==1.26.4
+opencv-python-headless==4.9.0.80
+tqdm==4.66.4

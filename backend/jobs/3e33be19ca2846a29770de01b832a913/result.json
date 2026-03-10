@@ -1,0 +1,2432 @@
+{
+  "image": "D:\\Intellidoc\\backend\\jobs\\3e33be19ca2846a29770de01b832a913\\input.png",
+  "page_size": {
+    "w": 1654,
+    "h": 2339
+  },
+  "columns_estimate": {
+    "gutter": [
+      632.0075093867334,
+      668.0075093867334
+    ],
+    "left_range": [
+      373.0,
+      516.0
+    ],
+    "right_range": [
+      828.05,
+      1171.3
+    ],
+    "conf": 0.9999999999990922
+  },
+  "layout_blocks": [
+    {
+      "type": "text",
+      "bbox": [
+        850,
+        703,
+        1460,
+        2022
+      ],
+      "sub_blocks": [
+        {
+          "bbox": [
+            850,
+            704,
+            1457,
+            1129
+          ],
+          "text": "Wikipedia containing the answer, the task is tc\npredict the answer text span in the passage.\nAs shown in Figure 1, in the question answer\ning task, we represent the input question and pas\nsage as a single packed sequence, with the ques\ntion using the A embedding and the passage using\nthe B embedding. We only introduce a start vec\ntor S E RH and an end vector E E RH during\nfine-tuning. The probability of word i being the\nstart of the answer span is computed as a dot prod\nuct between T, and S followed by a softmax over\neS.T",
+          "kind": "right"
+        },
+        {
+          "bbox": [
+            853,
+            1118,
+            1346,
+            1150
+          ],
+          "text": "all of the words in the paragraph: P, =",
+          "kind": "right"
+        },
+        {
+          "bbox": [
+            853,
+            1131,
+            1457,
+            2021
+          ],
+          "text": "; eS Tj\nThe analogous formula is used for the end of the\nanswer span. The score of a candidate span fron\nposition i to position j is defined as S-T, + E-T;\nand the maximum scoring span where j  i is\nused as a prediction. The training objective is the\nsum of the log-likelihoods of the correct start and\nend positions. We fine-tune for 3 epochs with a\nlearning rate of 5e-5 and a batch size of 32.\nTable 2 shows top leaderboard entries as well\nas results from top published systems (Seo et al.\n2017; Clark and Gardner, 2018; Peters et al.\n2018a; Hu et al., 2018). The top results from the\nSQuAD leaderboard do not have up-to-date public\nsystem descriptions available,11 and are allowed to\nuse any public data when training their systems.\nWe therefore use modest data augmentation in\nour system by first fine-tuning on TriviaQA (Joshi\net al., 2017) befor fine-tuning on SQuAD.\nOur best performing system outperforms the top.\nleaderboard system by +1.5 F1 in ensembling and\n+1.3 F1 as a single system. In fact, our single\nBERT model outperforms the top ensemble sys\ntem in terms of F1 score Without TriviaOA fin",
+          "kind": "right"
+        }
+      ],
+      "text": "Wikipedia containing the answer, the task is tc\npredict the answer text span in the passage.\nAs shown in Figure 1, in the question answer\ning task, we represent the input question and pas\nsage as a single packed sequence, with the ques\ntion using the A embedding and the passage using\nthe B embedding. We only introduce a start vec\ntor S E RH and an end vector E E RH during\nfine-tuning. The probability of word i being the\nstart of the answer span is computed as a dot prod\nuct between T, and S followed by a softmax over\neS.T\n\nall of the words in the paragraph: P, =\n\n; eS Tj\nThe analogous formula is used for the end of the\nanswer span. The score of a candidate span fron\nposition i to position j is defined as S-T, + E-T;\nand the maximum scoring span where j  i is\nused as a prediction. The training objective is the\nsum of the log-likelihoods of the correct start and\nend positions. We fine-tune for 3 epochs with a\nlearning rate of 5e-5 and a batch size of 32.\nTable 2 shows top leaderboard entries as well\nas results from top published systems (Seo et al.\n2017; Clark and Gardner, 2018; Peters et al.\n2018a; Hu et al., 2018). The top results from the\nSQuAD leaderboard do not have up-to-date public\nsystem descriptions available,11 and are allowed to\nuse any public data when training their systems.\nWe therefore use modest data augmentation in\nour system by first fine-tuning on TriviaQA (Joshi\net al., 2017) befor fine-tuning on SQuAD.\nOur best performing system outperforms the top.\nleaderboard system by +1.5 F1 in ensembling and\n+1.3 F1 as a single system. In fact, our single\nBERT model outperforms the top ensemble sys\ntem in terms of F1 score Without TriviaOA fin"
+    },
+    {
+      "type": "text",
+      "bbox": [
+        199,
+        1838,
+        805,
+        1979
+      ],
+      "sub_blocks": [
+        {
+          "bbox": [
+            200,
+            1840,
+            803,
+            1977
+          ],
+          "text": "The Stanford Question Answering Dataset\n(SQuAD v1.1) is a collection of 100k crowd\nsourced question/answer pairs (Rajpurkar et al..\n2016). Given a question and a passage from.",
+          "kind": "left"
+        }
+      ],
+      "text": "The Stanford Question Answering Dataset\n(SQuAD v1.1) is a collection of 100k crowd\nsourced question/answer pairs (Rajpurkar et al..\n2016). Given a question and a passage from."
+    },
+    {
+      "type": "text",
+      "bbox": [
+        200,
+        457,
+        1460,
+        626
+      ],
+      "sub_blocks": [
+        {
+          "bbox": [
+            200,
+            460,
+            1457,
+            617
+          ],
+          "text": "Table 1: GLUE Test results, scored by the evaluation server (https://qluebenchmark.com/1eaderboard)\nThe number below each task denotes the number of training examples. The \"Average\" column is slightly different\nthan the official GLUE score, since we exclude the problematic WNLI set. BERT and OpenAI GPT are single\nmodel, single task. F1 scores are reported for QQP and MRPC, Spearman correlations are reported for STS-B, and\naccuracy scores are reported for the other tasks. We exclude entries that use BERT as one of their components.",
+          "kind": "full"
+        }
+      ],
+      "text": "Table 1: GLUE Test results, scored by the evaluation server (https://qluebenchmark.com/1eaderboard)\nThe number below each task denotes the number of training examples. The \"Average\" column is slightly different\nthan the official GLUE score, since we exclude the problematic WNLI set. BERT and OpenAI GPT are single\nmodel, single task. F1 scores are reported for QQP and MRPC, Spearman correlations are reported for STS-B, and\naccuracy scores are reported for the other tasks. We exclude entries that use BERT as one of their components."
+    },
+    {
+      "type": "text",
+      "bbox": [
+        198,
+        699,
+        805,
+        1095
+      ],
+      "sub_blocks": [
+        {
+          "bbox": [
+            199,
+            701,
+            802,
+            1062
+          ],
+          "text": "We use a batch size of 32 and fine-tune for 3\nepochs over the data for all GLUE tasks. For each\ntask, we selected the best fine-tuning learning rate\n(among 5e-5, 4e-5, 3e-5, and 2e-5) on the Dev set\nAdditionally, for BERTLARGE we found that fine-.\ntuning was sometimes unstable on small datasets\nso we ran several random restarts and selected the\nbest model on the Dev set. With random restarts\nwe use the same pre-trained checkpoint but per\nform different fine-tuning data shuffling and clas",
+          "kind": "left"
+        }
+      ],
+      "text": "We use a batch size of 32 and fine-tune for 3\nepochs over the data for all GLUE tasks. For each\ntask, we selected the best fine-tuning learning rate\n(among 5e-5, 4e-5, 3e-5, and 2e-5) on the Dev set\nAdditionally, for BERTLARGE we found that fine-.\ntuning was sometimes unstable on small datasets\nso we ran several random restarts and selected the\nbest model on the Dev set. With random restarts\nwe use the same pre-trained checkpoint but per\nform different fine-tuning data shuffling and clas"
+    },
+    {
+      "type": "text",
+      "bbox": [
+        197,
+        1135,
+        805,
+        1746
+      ],
+      "sub_blocks": [
+        {
+          "bbox": [
+            198,
+            1149,
+            802,
+            1479
+          ],
+          "text": "BERTBASE and BERTLARGE outperform all sys\ntems on all tasks by a substantial margin, obtaining\n4.5% and 7.0% respective average accuracy im\nprovement over the prior state of the art. Note tha\nBERTbAsE and OpenAI GPT are nearly identical\nin terms of model architecture apart from the at\ntention masking. For the largest and most widely\nreported GLUE task, MNLI, BERT obtains a 4.6%\nabsolute accuracy improvement. On the official",
+          "kind": "left"
+        },
+        {
+          "bbox": [
+            199,
+            1527,
+            803,
+            1742
+          ],
+          "text": "of 80.5, compared to OpenAI GPT, which obtains\n72.8 as of the date of writing.\nWe find that BERTLARGE significantly outper\nforms BERTBAsE across all tasks, especially those\nwith very little training data. The effect of mode.\nsize is explored more thoroughly in Section 5.2.",
+          "kind": "left"
+        }
+      ],
+      "text": "BERTBASE and BERTLARGE outperform all sys\ntems on all tasks by a substantial margin, obtaining\n4.5% and 7.0% respective average accuracy im\nprovement over the prior state of the art. Note tha\nBERTbAsE and OpenAI GPT are nearly identical\nin terms of model architecture apart from the at\ntention masking. For the largest and most widely\nreported GLUE task, MNLI, BERT obtains a 4.6%\nabsolute accuracy improvement. On the official\n\nof 80.5, compared to OpenAI GPT, which obtains\n72.8 as of the date of writing.\nWe find that BERTLARGE significantly outper\nforms BERTBAsE across all tasks, especially those\nwith very little training data. The effect of mode.\nsize is explored more thoroughly in Section 5.2."
+    },
+    {
+      "type": "title",
+      "bbox": [
+        199,
+        1785,
+        427,
+        1812
+      ],
+      "sub_blocks": [
+        {
+          "bbox": [
+            201,
+            1786,
+            424,
+            1809
+          ],
+          "text": "4.2 SOuAD v1.1",
+          "kind": "left"
+        }
+      ],
+      "text": "4.2 SOuAD v1.1"
+    },
+    {
+      "type": "table",
+      "bbox": [
+        196,
+        176,
+        1467,
+        428
+      ],
+      "table": {
+        "matrix": [
+          [
+            "System",
+            "MNLI-(m/mm)",
+            "QQP",
+            "QNLI",
+            "SST-2",
+            "CoLA",
+            "STS-B",
+            "MRPC",
+            "RTE",
+            "Average"
+          ],
+          [
+            "",
+            "392k",
+            "363k",
+            "108k",
+            "67k",
+            "8.5k",
+            "5.7k",
+            "3.5k",
+            "2.5k",
+            ""
+          ],
+          [
+            "Pre-OpenAISOTA",
+            "80.6/80.1",
+            "66.1",
+            "82.3",
+            "93.2",
+            "35.0",
+            "81.0",
+            "86.0",
+            "61.7",
+            "74.0"
+          ],
+          [
+            "BiLSTM+ELMo+Attn",
+            "76.4/76.1",
+            "64.8",
+            "79.8",
+            "90.4",
+            "36.0",
+            "73.3",
+            "84.9",
+            "56.8",
+            "71.0"
+          ],
+          [
+            "OpenAI GPT",
+            "82.1/81.4",
+            "70.3",
+            "87.4",
+            "91.3",
+            "45.4",
+            "80.0",
+            "82.3",
+            "56.0",
+            "75.1"
+          ],
+          [
+            "BERT BASE",
+            "84.6/83.4",
+            "71.2",
+            "90.5",
+            "93.5",
+            "52.1",
+            "85.8",
+            "88.9",
+            "66.4",
+            "79.6"
+          ],
+          [
+            "BERT LARGE",
+            "86.7/85.9",
+            "72.1",
+            "92.7",
+            "94.9",
+            "60.5",
+            "86.5",
+            "89.3",
+            "70.1",
+            "82.1"
+          ]
+        ],
+        "rows": [
+          202,
+          232,
+          270,
+          300,
+          336,
+          368,
+          402
+        ],
+        "cols": [
+          329,
+          541,
+          674,
+          777,
+          879,
+          983,
+          1090,
+          1197,
+          1302,
+          1410
+        ],
+        "cells": [
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              196,
+              191,
+              462,
+              213
+            ],
+            "text": "System",
+            "row": 0,
+            "col": 0
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              462,
+              191,
+              620,
+              213
+            ],
+            "text": "MNLI-(m/mm)",
+            "row": 0,
+            "col": 1
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              620,
+              191,
+              728,
+              213
+            ],
+            "text": "QQP",
+            "row": 0,
+            "col": 2
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              728,
+              191,
+              827,
+              213
+            ],
+            "text": "QNLI",
+            "row": 0,
+            "col": 3
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              827,
+              191,
+              931,
+              213
+            ],
+            "text": "SST-2",
+            "row": 0,
+            "col": 4
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              931,
+              191,
+              1036,
+              213
+            ],
+            "text": "CoLA",
+            "row": 0,
+            "col": 5
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1036,
+              191,
+              1145,
+              213
+            ],
+            "text": "STS-B",
+            "row": 0,
+            "col": 6
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1145,
+              191,
+              1250,
+              213
+            ],
+            "text": "MRPC",
+            "row": 0,
+            "col": 7
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1250,
+              191,
+              1354,
+              213
+            ],
+            "text": "RTE",
+            "row": 0,
+            "col": 8
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1354,
+              191,
+              1467,
+              213
+            ],
+            "text": "Average",
+            "row": 0,
+            "col": 9
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              196,
+              224,
+              462,
+              241
+            ],
+            "text": "",
+            "row": 1,
+            "col": 0
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              462,
+              224,
+              620,
+              241
+            ],
+            "text": "392k",
+            "row": 1,
+            "col": 1
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              620,
+              224,
+              728,
+              241
+            ],
+            "text": "363k",
+            "row": 1,
+            "col": 2
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              728,
+              224,
+              827,
+              241
+            ],
+            "text": "108k",
+            "row": 1,
+            "col": 3
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              827,
+              224,
+              931,
+              241
+            ],
+            "text": "67k",
+            "row": 1,
+            "col": 4
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              931,
+              224,
+              1036,
+              241
+            ],
+            "text": "8.5k",
+            "row": 1,
+            "col": 5
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1036,
+              224,
+              1145,
+              241
+            ],
+            "text": "5.7k",
+            "row": 1,
+            "col": 6
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1145,
+              224,
+              1250,
+              241
+            ],
+            "text": "3.5k",
+            "row": 1,
+            "col": 7
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1250,
+              224,
+              1354,
+              241
+            ],
+            "text": "2.5k",
+            "row": 1,
+            "col": 8
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1354,
+              224,
+              1467,
+              241
+            ],
+            "text": "",
+            "row": 1,
+            "col": 9
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              196,
+              259,
+              462,
+              281
+            ],
+            "text": "Pre-OpenAISOTA",
+            "row": 2,
+            "col": 0
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              462,
+              259,
+              620,
+              281
+            ],
+            "text": "80.6/80.1",
+            "row": 2,
+            "col": 1
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              620,
+              259,
+              728,
+              281
+            ],
+            "text": "66.1",
+            "row": 2,
+            "col": 2
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              728,
+              259,
+              827,
+              281
+            ],
+            "text": "82.3",
+            "row": 2,
+            "col": 3
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              827,
+              259,
+              931,
+              281
+            ],
+            "text": "93.2",
+            "row": 2,
+            "col": 4
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              931,
+              259,
+              1036,
+              281
+            ],
+            "text": "35.0",
+            "row": 2,
+            "col": 5
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1036,
+              259,
+              1145,
+              281
+            ],
+            "text": "81.0",
+            "row": 2,
+            "col": 6
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1145,
+              259,
+              1250,
+              281
+            ],
+            "text": "86.0",
+            "row": 2,
+            "col": 7
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1250,
+              259,
+              1354,
+              281
+            ],
+            "text": "61.7",
+            "row": 2,
+            "col": 8
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1354,
+              259,
+              1467,
+              281
+            ],
+            "text": "74.0",
+            "row": 2,
+            "col": 9
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              196,
+              292,
+              462,
+              309
+            ],
+            "text": "BiLSTM+ELMo+Attn",
+            "row": 3,
+            "col": 0
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              462,
+              292,
+              620,
+              309
+            ],
+            "text": "76.4/76.1",
+            "row": 3,
+            "col": 1
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              620,
+              292,
+              728,
+              309
+            ],
+            "text": "64.8",
+            "row": 3,
+            "col": 2
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              728,
+              292,
+              827,
+              309
+            ],
+            "text": "79.8",
+            "row": 3,
+            "col": 3
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              827,
+              292,
+              931,
+              309
+            ],
+            "text": "90.4",
+            "row": 3,
+            "col": 4
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              931,
+              292,
+              1036,
+              309
+            ],
+            "text": "36.0",
+            "row": 3,
+            "col": 5
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1036,
+              292,
+              1145,
+              309
+            ],
+            "text": "73.3",
+            "row": 3,
+            "col": 6
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1145,
+              292,
+              1250,
+              309
+            ],
+            "text": "84.9",
+            "row": 3,
+            "col": 7
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1250,
+              292,
+              1354,
+              309
+            ],
+            "text": "56.8",
+            "row": 3,
+            "col": 8
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1354,
+              292,
+              1467,
+              309
+            ],
+            "text": "71.0",
+            "row": 3,
+            "col": 9
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              196,
+              325,
+              462,
+              347
+            ],
+            "text": "OpenAI GPT",
+            "row": 4,
+            "col": 0
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              462,
+              325,
+              620,
+              347
+            ],
+            "text": "82.1/81.4",
+            "row": 4,
+            "col": 1
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              620,
+              325,
+              728,
+              347
+            ],
+            "text": "70.3",
+            "row": 4,
+            "col": 2
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              728,
+              325,
+              827,
+              347
+            ],
+            "text": "87.4",
+            "row": 4,
+            "col": 3
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              827,
+              325,
+              931,
+              347
+            ],
+            "text": "91.3",
+            "row": 4,
+            "col": 4
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              931,
+              325,
+              1036,
+              347
+            ],
+            "text": "45.4",
+            "row": 4,
+            "col": 5
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1036,
+              325,
+              1145,
+              347
+            ],
+            "text": "80.0",
+            "row": 4,
+            "col": 6
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1145,
+              325,
+              1250,
+              347
+            ],
+            "text": "82.3",
+            "row": 4,
+            "col": 7
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1250,
+              325,
+              1354,
+              347
+            ],
+            "text": "56.0",
+            "row": 4,
+            "col": 8
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1354,
+              325,
+              1467,
+              347
+            ],
+            "text": "75.1",
+            "row": 4,
+            "col": 9
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              196,
+              359,
+              462,
+              378
+            ],
+            "text": "BERT BASE",
+            "row": 5,
+            "col": 0
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              462,
+              359,
+              620,
+              378
+            ],
+            "text": "84.6/83.4",
+            "row": 5,
+            "col": 1
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              620,
+              359,
+              728,
+              378
+            ],
+            "text": "71.2",
+            "row": 5,
+            "col": 2
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              728,
+              359,
+              827,
+              378
+            ],
+            "text": "90.5",
+            "row": 5,
+            "col": 3
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              827,
+              359,
+              931,
+              378
+            ],
+            "text": "93.5",
+            "row": 5,
+            "col": 4
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              931,
+              359,
+              1036,
+              378
+            ],
+            "text": "52.1",
+            "row": 5,
+            "col": 5
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1036,
+              359,
+              1145,
+              378
+            ],
+            "text": "85.8",
+            "row": 5,
+            "col": 6
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1145,
+              359,
+              1250,
+              378
+            ],
+            "text": "88.9",
+            "row": 5,
+            "col": 7
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1250,
+              359,
+              1354,
+              378
+            ],
+            "text": "66.4",
+            "row": 5,
+            "col": 8
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1354,
+              359,
+              1467,
+              378
+            ],
+            "text": "79.6",
+            "row": 5,
+            "col": 9
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              196,
+              393,
+              462,
+              411
+            ],
+            "text": "BERT LARGE",
+            "row": 6,
+            "col": 0
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              462,
+              393,
+              620,
+              411
+            ],
+            "text": "86.7/85.9",
+            "row": 6,
+            "col": 1
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              620,
+              393,
+              728,
+              411
+            ],
+            "text": "72.1",
+            "row": 6,
+            "col": 2
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              728,
+              393,
+              827,
+              411
+            ],
+            "text": "92.7",
+            "row": 6,
+            "col": 3
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              827,
+              393,
+              931,
+              411
+            ],
+            "text": "94.9",
+            "row": 6,
+            "col": 4
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              931,
+              393,
+              1036,
+              411
+            ],
+            "text": "60.5",
+            "row": 6,
+            "col": 5
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1036,
+              393,
+              1145,
+              411
+            ],
+            "text": "86.5",
+            "row": 6,
+            "col": 6
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1145,
+              393,
+              1250,
+              411
+            ],
+            "text": "89.3",
+            "row": 6,
+            "col": 7
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1250,
+              393,
+              1354,
+              411
+            ],
+            "text": "70.1",
+            "row": 6,
+            "col": 8
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1354,
+              393,
+              1467,
+              411
+            ],
+            "text": "82.1",
+            "row": 6,
+            "col": 9
+          }
+        ],
+        "real_bbox": [
+          196,
+          176,
+          1467,
+          428
+        ]
+      }
+    },
+    {
+      "type": "reference",
+      "bbox": [
+        198,
+        2014,
+        802,
+        2123
+      ],
+      "sub_blocks": [
+        {
+          "bbox": [
+            201,
+            2015,
+            800,
+            2095
+          ],
+          "text": "9The GLUE data set distribution does not include the Tes\nlabels, and we only made a single GLUE evaluation serve\nsubmission for each of BERTBAsE and BERTLARGE.",
+          "kind": "left"
+        }
+      ],
+      "text": "9The GLUE data set distribution does not include the Tes\nlabels, and we only made a single GLUE evaluation serve\nsubmission for each of BERTBAsE and BERTLARGE."
+    },
+    {
+      "type": "reference",
+      "bbox": [
+        849,
+        2071,
+        1460,
+        2123
+      ],
+      "sub_blocks": [
+        {
+          "bbox": [
+            854,
+            2073,
+            1456,
+            2121
+          ],
+          "text": "QANet is described in Yu et al. (20i8), but the system\nhas improved substantially after publication",
+          "kind": "right"
+        }
+      ],
+      "text": "QANet is described in Yu et al. (20i8), but the system\nhas improved substantially after publication"
+    }
+  ],
+  "reading_order": [
+    {
+      "type": "table",
+      "bbox": [
+        196,
+        176,
+        1467,
+        428
+      ],
+      "kind": "full",
+      "table": {
+        "matrix": [
+          [
+            "System",
+            "MNLI-(m/mm)",
+            "QQP",
+            "QNLI",
+            "SST-2",
+            "CoLA",
+            "STS-B",
+            "MRPC",
+            "RTE",
+            "Average"
+          ],
+          [
+            "",
+            "392k",
+            "363k",
+            "108k",
+            "67k",
+            "8.5k",
+            "5.7k",
+            "3.5k",
+            "2.5k",
+            ""
+          ],
+          [
+            "Pre-OpenAISOTA",
+            "80.6/80.1",
+            "66.1",
+            "82.3",
+            "93.2",
+            "35.0",
+            "81.0",
+            "86.0",
+            "61.7",
+            "74.0"
+          ],
+          [
+            "BiLSTM+ELMo+Attn",
+            "76.4/76.1",
+            "64.8",
+            "79.8",
+            "90.4",
+            "36.0",
+            "73.3",
+            "84.9",
+            "56.8",
+            "71.0"
+          ],
+          [
+            "OpenAI GPT",
+            "82.1/81.4",
+            "70.3",
+            "87.4",
+            "91.3",
+            "45.4",
+            "80.0",
+            "82.3",
+            "56.0",
+            "75.1"
+          ],
+          [
+            "BERT BASE",
+            "84.6/83.4",
+            "71.2",
+            "90.5",
+            "93.5",
+            "52.1",
+            "85.8",
+            "88.9",
+            "66.4",
+            "79.6"
+          ],
+          [
+            "BERT LARGE",
+            "86.7/85.9",
+            "72.1",
+            "92.7",
+            "94.9",
+            "60.5",
+            "86.5",
+            "89.3",
+            "70.1",
+            "82.1"
+          ]
+        ],
+        "rows": [
+          202,
+          232,
+          270,
+          300,
+          336,
+          368,
+          402
+        ],
+        "cols": [
+          329,
+          541,
+          674,
+          777,
+          879,
+          983,
+          1090,
+          1197,
+          1302,
+          1410
+        ],
+        "cells": [
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              196,
+              191,
+              462,
+              213
+            ],
+            "text": "System",
+            "row": 0,
+            "col": 0
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              462,
+              191,
+              620,
+              213
+            ],
+            "text": "MNLI-(m/mm)",
+            "row": 0,
+            "col": 1
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              620,
+              191,
+              728,
+              213
+            ],
+            "text": "QQP",
+            "row": 0,
+            "col": 2
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              728,
+              191,
+              827,
+              213
+            ],
+            "text": "QNLI",
+            "row": 0,
+            "col": 3
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              827,
+              191,
+              931,
+              213
+            ],
+            "text": "SST-2",
+            "row": 0,
+            "col": 4
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              931,
+              191,
+              1036,
+              213
+            ],
+            "text": "CoLA",
+            "row": 0,
+            "col": 5
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1036,
+              191,
+              1145,
+              213
+            ],
+            "text": "STS-B",
+            "row": 0,
+            "col": 6
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1145,
+              191,
+              1250,
+              213
+            ],
+            "text": "MRPC",
+            "row": 0,
+            "col": 7
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1250,
+              191,
+              1354,
+              213
+            ],
+            "text": "RTE",
+            "row": 0,
+            "col": 8
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1354,
+              191,
+              1467,
+              213
+            ],
+            "text": "Average",
+            "row": 0,
+            "col": 9
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              196,
+              224,
+              462,
+              241
+            ],
+            "text": "",
+            "row": 1,
+            "col": 0
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              462,
+              224,
+              620,
+              241
+            ],
+            "text": "392k",
+            "row": 1,
+            "col": 1
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              620,
+              224,
+              728,
+              241
+            ],
+            "text": "363k",
+            "row": 1,
+            "col": 2
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              728,
+              224,
+              827,
+              241
+            ],
+            "text": "108k",
+            "row": 1,
+            "col": 3
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              827,
+              224,
+              931,
+              241
+            ],
+            "text": "67k",
+            "row": 1,
+            "col": 4
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              931,
+              224,
+              1036,
+              241
+            ],
+            "text": "8.5k",
+            "row": 1,
+            "col": 5
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1036,
+              224,
+              1145,
+              241
+            ],
+            "text": "5.7k",
+            "row": 1,
+            "col": 6
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1145,
+              224,
+              1250,
+              241
+            ],
+            "text": "3.5k",
+            "row": 1,
+            "col": 7
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1250,
+              224,
+              1354,
+              241
+            ],
+            "text": "2.5k",
+            "row": 1,
+            "col": 8
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1354,
+              224,
+              1467,
+              241
+            ],
+            "text": "",
+            "row": 1,
+            "col": 9
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              196,
+              259,
+              462,
+              281
+            ],
+            "text": "Pre-OpenAISOTA",
+            "row": 2,
+            "col": 0
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              462,
+              259,
+              620,
+              281
+            ],
+            "text": "80.6/80.1",
+            "row": 2,
+            "col": 1
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              620,
+              259,
+              728,
+              281
+            ],
+            "text": "66.1",
+            "row": 2,
+            "col": 2
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              728,
+              259,
+              827,
+              281
+            ],
+            "text": "82.3",
+            "row": 2,
+            "col": 3
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              827,
+              259,
+              931,
+              281
+            ],
+            "text": "93.2",
+            "row": 2,
+            "col": 4
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              931,
+              259,
+              1036,
+              281
+            ],
+            "text": "35.0",
+            "row": 2,
+            "col": 5
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1036,
+              259,
+              1145,
+              281
+            ],
+            "text": "81.0",
+            "row": 2,
+            "col": 6
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1145,
+              259,
+              1250,
+              281
+            ],
+            "text": "86.0",
+            "row": 2,
+            "col": 7
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1250,
+              259,
+              1354,
+              281
+            ],
+            "text": "61.7",
+            "row": 2,
+            "col": 8
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1354,
+              259,
+              1467,
+              281
+            ],
+            "text": "74.0",
+            "row": 2,
+            "col": 9
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              196,
+              292,
+              462,
+              309
+            ],
+            "text": "BiLSTM+ELMo+Attn",
+            "row": 3,
+            "col": 0
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              462,
+              292,
+              620,
+              309
+            ],
+            "text": "76.4/76.1",
+            "row": 3,
+            "col": 1
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              620,
+              292,
+              728,
+              309
+            ],
+            "text": "64.8",
+            "row": 3,
+            "col": 2
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              728,
+              292,
+              827,
+              309
+            ],
+            "text": "79.8",
+            "row": 3,
+            "col": 3
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              827,
+              292,
+              931,
+              309
+            ],
+            "text": "90.4",
+            "row": 3,
+            "col": 4
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              931,
+              292,
+              1036,
+              309
+            ],
+            "text": "36.0",
+            "row": 3,
+            "col": 5
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1036,
+              292,
+              1145,
+              309
+            ],
+            "text": "73.3",
+            "row": 3,
+            "col": 6
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1145,
+              292,
+              1250,
+              309
+            ],
+            "text": "84.9",
+            "row": 3,
+            "col": 7
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1250,
+              292,
+              1354,
+              309
+            ],
+            "text": "56.8",
+            "row": 3,
+            "col": 8
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1354,
+              292,
+              1467,
+              309
+            ],
+            "text": "71.0",
+            "row": 3,
+            "col": 9
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              196,
+              325,
+              462,
+              347
+            ],
+            "text": "OpenAI GPT",
+            "row": 4,
+            "col": 0
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              462,
+              325,
+              620,
+              347
+            ],
+            "text": "82.1/81.4",
+            "row": 4,
+            "col": 1
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              620,
+              325,
+              728,
+              347
+            ],
+            "text": "70.3",
+            "row": 4,
+            "col": 2
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              728,
+              325,
+              827,
+              347
+            ],
+            "text": "87.4",
+            "row": 4,
+            "col": 3
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              827,
+              325,
+              931,
+              347
+            ],
+            "text": "91.3",
+            "row": 4,
+            "col": 4
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              931,
+              325,
+              1036,
+              347
+            ],
+            "text": "45.4",
+            "row": 4,
+            "col": 5
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1036,
+              325,
+              1145,
+              347
+            ],
+            "text": "80.0",
+            "row": 4,
+            "col": 6
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1145,
+              325,
+              1250,
+              347
+            ],
+            "text": "82.3",
+            "row": 4,
+            "col": 7
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1250,
+              325,
+              1354,
+              347
+            ],
+            "text": "56.0",
+            "row": 4,
+            "col": 8
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1354,
+              325,
+              1467,
+              347
+            ],
+            "text": "75.1",
+            "row": 4,
+            "col": 9
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              196,
+              359,
+              462,
+              378
+            ],
+            "text": "BERT BASE",
+            "row": 5,
+            "col": 0
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              462,
+              359,
+              620,
+              378
+            ],
+            "text": "84.6/83.4",
+            "row": 5,
+            "col": 1
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              620,
+              359,
+              728,
+              378
+            ],
+            "text": "71.2",
+            "row": 5,
+            "col": 2
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              728,
+              359,
+              827,
+              378
+            ],
+            "text": "90.5",
+            "row": 5,
+            "col": 3
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              827,
+              359,
+              931,
+              378
+            ],
+            "text": "93.5",
+            "row": 5,
+            "col": 4
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              931,
+              359,
+              1036,
+              378
+            ],
+            "text": "52.1",
+            "row": 5,
+            "col": 5
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1036,
+              359,
+              1145,
+              378
+            ],
+            "text": "85.8",
+            "row": 5,
+            "col": 6
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1145,
+              359,
+              1250,
+              378
+            ],
+            "text": "88.9",
+            "row": 5,
+            "col": 7
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1250,
+              359,
+              1354,
+              378
+            ],
+            "text": "66.4",
+            "row": 5,
+            "col": 8
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1354,
+              359,
+              1467,
+              378
+            ],
+            "text": "79.6",
+            "row": 5,
+            "col": 9
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              196,
+              393,
+              462,
+              411
+            ],
+            "text": "BERT LARGE",
+            "row": 6,
+            "col": 0
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              462,
+              393,
+              620,
+              411
+            ],
+            "text": "86.7/85.9",
+            "row": 6,
+            "col": 1
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              620,
+              393,
+              728,
+              411
+            ],
+            "text": "72.1",
+            "row": 6,
+            "col": 2
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              728,
+              393,
+              827,
+              411
+            ],
+            "text": "92.7",
+            "row": 6,
+            "col": 3
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              827,
+              393,
+              931,
+              411
+            ],
+            "text": "94.9",
+            "row": 6,
+            "col": 4
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              931,
+              393,
+              1036,
+              411
+            ],
+            "text": "60.5",
+            "row": 6,
+            "col": 5
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1036,
+              393,
+              1145,
+              411
+            ],
+            "text": "86.5",
+            "row": 6,
+            "col": 6
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1145,
+              393,
+              1250,
+              411
+            ],
+            "text": "89.3",
+            "row": 6,
+            "col": 7
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1250,
+              393,
+              1354,
+              411
+            ],
+            "text": "70.1",
+            "row": 6,
+            "col": 8
+          },
+          {
+            "label": "table cell",
+            "score": 1.0,
+            "bbox": [
+              1354,
+              393,
+              1467,
+              411
+            ],
+            "text": "82.1",
+            "row": 6,
+            "col": 9
+          }
+        ]
+      },
+      "order": 1
+    },
+    {
+      "type": "text",
+      "bbox": [
+        200,
+        460,
+        1457,
+        617
+      ],
+      "kind": "full",
+      "text": "Table 1: GLUE Test results, scored by the evaluation server (https://qluebenchmark.com/1eaderboard)\nThe number below each task denotes the number of training examples. The \"Average\" column is slightly different\nthan the official GLUE score, since we exclude the problematic WNLI set. BERT and OpenAI GPT are single\nmodel, single task. F1 scores are reported for QQP and MRPC, Spearman correlations are reported for STS-B, and\naccuracy scores are reported for the other tasks. We exclude entries that use BERT as one of their components.",
+      "order": 2
+    },
+    {
+      "type": "text",
+      "bbox": [
+        199,
+        701,
+        802,
+        1062
+      ],
+      "kind": "left",
+      "text": "We use a batch size of 32 and fine-tune for 3\nepochs over the data for all GLUE tasks. For each\ntask, we selected the best fine-tuning learning rate\n(among 5e-5, 4e-5, 3e-5, and 2e-5) on the Dev set\nAdditionally, for BERTLARGE we found that fine-.\ntuning was sometimes unstable on small datasets\nso we ran several random restarts and selected the\nbest model on the Dev set. With random restarts\nwe use the same pre-trained checkpoint but per\nform different fine-tuning data shuffling and clas",
+      "order": 3
+    },
+    {
+      "type": "text",
+      "bbox": [
+        850,
+        704,
+        1457,
+        1129
+      ],
+      "kind": "right",
+      "text": "Wikipedia containing the answer, the task is tc\npredict the answer text span in the passage.\nAs shown in Figure 1, in the question answer\ning task, we represent the input question and pas\nsage as a single packed sequence, with the ques\ntion using the A embedding and the passage using\nthe B embedding. We only introduce a start vec\ntor S E RH and an end vector E E RH during\nfine-tuning. The probability of word i being the\nstart of the answer span is computed as a dot prod\nuct between T, and S followed by a softmax over\neS.T",
+      "order": 4
+    },
+    {
+      "type": "text",
+      "bbox": [
+        853,
+        1118,
+        1346,
+        1150
+      ],
+      "kind": "right",
+      "text": "all of the words in the paragraph: P, =",
+      "order": 5
+    },
+    {
+      "type": "text",
+      "bbox": [
+        853,
+        1131,
+        1457,
+        2021
+      ],
+      "kind": "right",
+      "text": "; eS Tj\nThe analogous formula is used for the end of the\nanswer span. The score of a candidate span fron\nposition i to position j is defined as S-T, + E-T;\nand the maximum scoring span where j  i is\nused as a prediction. The training objective is the\nsum of the log-likelihoods of the correct start and\nend positions. We fine-tune for 3 epochs with a\nlearning rate of 5e-5 and a batch size of 32.\nTable 2 shows top leaderboard entries as well\nas results from top published systems (Seo et al.\n2017; Clark and Gardner, 2018; Peters et al.\n2018a; Hu et al., 2018). The top results from the\nSQuAD leaderboard do not have up-to-date public\nsystem descriptions available,11 and are allowed to\nuse any public data when training their systems.\nWe therefore use modest data augmentation in\nour system by first fine-tuning on TriviaQA (Joshi\net al., 2017) befor fine-tuning on SQuAD.\nOur best performing system outperforms the top.\nleaderboard system by +1.5 F1 in ensembling and\n+1.3 F1 as a single system. In fact, our single\nBERT model outperforms the top ensemble sys\ntem in terms of F1 score Without TriviaOA fin",
+      "order": 6
+    },
+    {
+      "type": "text",
+      "bbox": [
+        198,
+        1149,
+        802,
+        1479
+      ],
+      "kind": "left",
+      "text": "BERTBASE and BERTLARGE outperform all sys\ntems on all tasks by a substantial margin, obtaining\n4.5% and 7.0% respective average accuracy im\nprovement over the prior state of the art. Note tha\nBERTbAsE and OpenAI GPT are nearly identical\nin terms of model architecture apart from the at\ntention masking. For the largest and most widely\nreported GLUE task, MNLI, BERT obtains a 4.6%\nabsolute accuracy improvement. On the official",
+      "order": 7
+    },
+    {
+      "type": "text",
+      "bbox": [
+        199,
+        1527,
+        803,
+        1742
+      ],
+      "kind": "left",
+      "text": "of 80.5, compared to OpenAI GPT, which obtains\n72.8 as of the date of writing.\nWe find that BERTLARGE significantly outper\nforms BERTBAsE across all tasks, especially those\nwith very little training data. The effect of mode.\nsize is explored more thoroughly in Section 5.2.",
+      "order": 8
+    },
+    {
+      "type": "title",
+      "bbox": [
+        201,
+        1786,
+        424,
+        1809
+      ],
+      "kind": "left",
+      "text": "4.2 SOuAD v1.1",
+      "order": 9
+    },
+    {
+      "type": "text",
+      "bbox": [
+        200,
+        1840,
+        803,
+        1977
+      ],
+      "kind": "left",
+      "text": "The Stanford Question Answering Dataset\n(SQuAD v1.1) is a collection of 100k crowd\nsourced question/answer pairs (Rajpurkar et al..\n2016). Given a question and a passage from.",
+      "order": 10
+    },
+    {
+      "type": "reference",
+      "bbox": [
+        201,
+        2015,
+        800,
+        2095
+      ],
+      "kind": "left",
+      "text": "9The GLUE data set distribution does not include the Tes\nlabels, and we only made a single GLUE evaluation serve\nsubmission for each of BERTBAsE and BERTLARGE.",
+      "order": 11
+    },
+    {
+      "type": "reference",
+      "bbox": [
+        854,
+        2073,
+        1456,
+        2121
+      ],
+      "kind": "right",
+      "text": "QANet is described in Yu et al. (20i8), but the system\nhas improved substantially after publication",
+      "order": 12
+    }
+  ]
+}

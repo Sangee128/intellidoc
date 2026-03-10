@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>input</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body  { font-family: "Times New Roman", serif; font-size: 11pt; line-height: 1.6;
+           max-width: 960px; margin: 2rem auto; padding: 0 1.5rem; color: #111; background: #fff; }
+  h1    { font-size: 18pt; text-align: center; margin-bottom: 1.5rem; }
+  h2    { font-size: 13pt; margin: 1.2rem 0 0.4rem; color: #2E5594; }
+  p     { margin: 0.4rem 0; }
+  p.ref { font-style: italic; font-size: 9pt; color: #555; margin: 0.2rem 0; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 0.8rem 0; }
+  .col  { min-width: 0; }
+  .full { margin: 0.5rem 0; }
+  table { border-collapse: collapse; width: 100%; margin: 0.8rem 0; font-size: 9.5pt; }
+  th, td { border: 1px solid #8EA9C1; padding: 4px 8px; text-align: left; }
+  tr.hdr th { background: #D9E1F2; font-weight: bold; }
+  tr.alt td { background: #F2F5FB; }
+  @media print {
+    .two-col { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<h1>input</h1>
+<div class="full"><table>
+<tr class="hdr">
+<th>System</th>
+<th>MNLI-(m/mm)</th>
+<th>QQP</th>
+<th>QNLI</th>
+<th>SST-2</th>
+<th>CoLA</th>
+<th>STS-B</th>
+<th>MRPC</th>
+<th>RTE</th>
+<th>Average</th>
+</tr>
+<tr class="hdr">
+<th></th>
+<th>392k</th>
+<th>363k</th>
+<th>108k</th>
+<th>67k</th>
+<th>8.5k</th>
+<th>5.7k</th>
+<th>3.5k</th>
+<th>2.5k</th>
+<th></th>
+</tr>
+<tr>
+<td>Pre-OpenAISOTA</td>
+<td>80.6/80.1</td>
+<td>66.1</td>
+<td>82.3</td>
+<td>93.2</td>
+<td>35.0</td>
+<td>81.0</td>
+<td>86.0</td>
+<td>61.7</td>
+<td>74.0</td>
+</tr>
+<tr class="alt">
+<td>BiLSTM+ELMo+Attn</td>
+<td>76.4/76.1</td>
+<td>64.8</td>
+<td>79.8</td>
+<td>90.4</td>
+<td>36.0</td>
+<td>73.3</td>
+<td>84.9</td>
+<td>56.8</td>
+<td>71.0</td>
+</tr>
+<tr>
+<td>OpenAI GPT</td>
+<td>82.1/81.4</td>
+<td>70.3</td>
+<td>87.4</td>
+<td>91.3</td>
+<td>45.4</td>
+<td>80.0</td>
+<td>82.3</td>
+<td>56.0</td>
+<td>75.1</td>
+</tr>
+<tr class="alt">
+<td>BERT BASE</td>
+<td>84.6/83.4</td>
+<td>71.2</td>
+<td>90.5</td>
+<td>93.5</td>
+<td>52.1</td>
+<td>85.8</td>
+<td>88.9</td>
+<td>66.4</td>
+<td>79.6</td>
+</tr>
+<tr>
+<td>BERT LARGE</td>
+<td>86.7/85.9</td>
+<td>72.1</td>
+<td>92.7</td>
+<td>94.9</td>
+<td>60.5</td>
+<td>86.5</td>
+<td>89.3</td>
+<td>70.1</td>
+<td>82.1</td>
+</tr>
+</table></div><div class="full"><p>Table 1: GLUE Test results, scored by the evaluation server (https://qluebenchmark.com/1eaderboard)<br>The number below each task denotes the number of training examples. The &quot;Average&quot; column is slightly different<br>than the official GLUE score, since we exclude the problematic WNLI set. BERT and OpenAI GPT are single<br>model, single task. F1 scores are reported for QQP and MRPC, Spearman correlations are reported for STS-B, and<br>accuracy scores are reported for the other tasks. We exclude entries that use BERT as one of their components.</p></div><div class="two-col"><div class="col left-col"><p>We use a batch size of 32 and fine-tune for 3<br>epochs over the data for all GLUE tasks. For each<br>task, we selected the best fine-tuning learning rate<br>(among 5e-5, 4e-5, 3e-5, and 2e-5) on the Dev set<br>Additionally, for BERTLARGE we found that fine-.<br>tuning was sometimes unstable on small datasets<br>so we ran several random restarts and selected the<br>best model on the Dev set. With random restarts<br>we use the same pre-trained checkpoint but per<br>form different fine-tuning data shuffling and clas</p>
+<p>BERTBASE and BERTLARGE outperform all sys<br>tems on all tasks by a substantial margin, obtaining<br>4.5% and 7.0% respective average accuracy im<br>provement over the prior state of the art. Note tha<br>BERTbAsE and OpenAI GPT are nearly identical<br>in terms of model architecture apart from the at<br>tention masking. For the largest and most widely<br>reported GLUE task, MNLI, BERT obtains a 4.6%<br>absolute accuracy improvement. On the official</p>
+<p>of 80.5, compared to OpenAI GPT, which obtains<br>72.8 as of the date of writing.<br>We find that BERTLARGE significantly outper<br>forms BERTBAsE across all tasks, especially those<br>with very little training data. The effect of mode.<br>size is explored more thoroughly in Section 5.2.</p>
+<h2>4.2 SOuAD v1.1</h2>
+<p>The Stanford Question Answering Dataset<br>(SQuAD v1.1) is a collection of 100k crowd<br>sourced question/answer pairs (Rajpurkar et al..<br>2016). Given a question and a passage from.</p>
+<p class="ref">9The GLUE data set distribution does not include the Tes<br>labels, and we only made a single GLUE evaluation serve<br>submission for each of BERTBAsE and BERTLARGE.</p></div><div class="col right-col"><p>Wikipedia containing the answer, the task is tc<br>predict the answer text span in the passage.<br>As shown in Figure 1, in the question answer<br>ing task, we represent the input question and pas<br>sage as a single packed sequence, with the ques<br>tion using the A embedding and the passage using<br>the B embedding. We only introduce a start vec<br>tor S E RH and an end vector E E RH during<br>fine-tuning. The probability of word i being the<br>start of the answer span is computed as a dot prod<br>uct between T, and S followed by a softmax over<br>eS.T</p>
+<p>all of the words in the paragraph: P, =</p>
+<p>; eS Tj<br>The analogous formula is used for the end of the<br>answer span. The score of a candidate span fron<br>position i to position j is defined as S-T, + E-T;<br>and the maximum scoring span where j  i is<br>used as a prediction. The training objective is the<br>sum of the log-likelihoods of the correct start and<br>end positions. We fine-tune for 3 epochs with a<br>learning rate of 5e-5 and a batch size of 32.<br>Table 2 shows top leaderboard entries as well<br>as results from top published systems (Seo et al.<br>2017; Clark and Gardner, 2018; Peters et al.<br>2018a; Hu et al., 2018). The top results from the<br>SQuAD leaderboard do not have up-to-date public<br>system descriptions available,11 and are allowed to<br>use any public data when training their systems.<br>We therefore use modest data augmentation in<br>our system by first fine-tuning on TriviaQA (Joshi<br>et al., 2017) befor fine-tuning on SQuAD.<br>Our best performing system outperforms the top.<br>leaderboard system by +1.5 F1 in ensembling and<br>+1.3 F1 as a single system. In fact, our single<br>BERT model outperforms the top ensemble sys<br>tem in terms of F1 score Without TriviaOA fin</p>
+<p class="ref">QANet is described in Yu et al. (20i8), but the system<br>has improved substantially after publication</p></div></div>
+</body>
+</html>
